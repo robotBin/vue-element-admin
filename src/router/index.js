@@ -7,10 +7,11 @@ Vue.use(Router)
 import Layout from '@/layout'
 
 /* Router Modules */
-import componentsRouter from './modules/components'
-import chartsRouter from './modules/charts'
+// import componentsRouter from './modules/components'
+// import chartsRouter from './modules/charts'
 import tableRouter from './modules/table'
-import nestedRouter from './modules/nested'
+import dealRouter from './modules/deal'
+// import nestedRouter from './modules/nested'
 
 /**
  * Note: sub-menu only appear when route children.length >= 1
@@ -83,6 +84,7 @@ export const constantRoutes = [
       }
     ]
   },
+  /*
   {
     path: '/documentation',
     component: Layout,
@@ -107,7 +109,7 @@ export const constantRoutes = [
         meta: { title: 'guide', icon: 'guide', noCache: true }
       }
     ]
-  },
+  },*/
   {
     path: '/profile',
     component: Layout,
@@ -170,7 +172,7 @@ export const asyncRoutes = [
       }
     ]
   },
-
+  /*
   {
     path: '/icon',
     component: Layout,
@@ -182,15 +184,17 @@ export const asyncRoutes = [
         meta: { title: 'icons', icon: 'icon', noCache: true }
       }
     ]
-  },
+  },*/
 
   /** when your routing map is too long, you can split it into small modules **/
+  /*
   componentsRouter,
   chartsRouter,
-  nestedRouter,
+  nestedRouter,*/
   tableRouter,
+  dealRouter,
 
-  {
+  /* {
     path: '/example',
     component: Layout,
     redirect: '/example/list',
@@ -370,7 +374,7 @@ export const asyncRoutes = [
         meta: { title: 'clipboardDemo', icon: 'clipboard' }
       }
     ]
-  },
+  },*/
 
   {
     path: '/i18n',
@@ -384,7 +388,7 @@ export const asyncRoutes = [
       }
     ]
   },
-
+  /*
   {
     path: 'external-link',
     component: Layout,
@@ -394,7 +398,7 @@ export const asyncRoutes = [
         meta: { title: 'externalLink', icon: 'link' }
       }
     ]
-  },
+  },*/
 
   // 404 page must be placed at the end !!!
   { path: '*', redirect: '/404', hidden: true }

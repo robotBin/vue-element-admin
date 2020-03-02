@@ -2,13 +2,13 @@
 
 import Layout from '@/layout'
 
-const tableRouter = {
-  path: '/table',
+const dealRouter = {
+  path: '/deal',
   component: Layout,
-  redirect: '/table/complex-table',
-  name: 'BondManage',
+  redirect: '/deal/complex-table',
+  name: 'DealManage',
   meta: {
-    title: 'BondManageMent',
+    title: 'DealManageMent',
     icon: 'table'
   },
   children: [
@@ -35,20 +35,8 @@ const tableRouter = {
       path: 'complex-table',
       component: () => import('@/views/table/complex-table'),
       name: 'ComplexTable',
-      meta: { title: 'ZeroCouponBond' }
-    },
-    {
-      path: 'FixedRateBond',
-      component: () => import('@/views/table/fixed-rate-bond'),
-      name: 'FixedRateBond',
-      meta: { title: 'FixedRateBond' }
-    },
-    {
-      path: 'FloatingRateBond',
-      component: () => import('@/views/table/fixed-rate-bond'),
-      name: 'ComplexTable',
-      meta: { title: 'FloatingRateBond' }
+      meta: { title: 'DealManageMent' }
     }
   ]
 }
-export default tableRouter
+export default dealRouter
